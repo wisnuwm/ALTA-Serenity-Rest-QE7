@@ -5,6 +5,7 @@ Feature: Reqres Features test
     When Send get list user request
     Then Status code should be 200 OK
     And Response body page should be <page>
+    And Validate get list user json schema
   Examples:
     |page|
     |1   |
@@ -15,6 +16,7 @@ Feature: Reqres Features test
     When Send post create user request
     Then Status code should be 201 Created
     And Response body should contain name "Wisnu Munawar" and job "QA Engineer"
+    And Validate create user json schema
   @latihan
   Scenario Outline: Put update user with valid json
     Given Put update user with valid json with id <id>
